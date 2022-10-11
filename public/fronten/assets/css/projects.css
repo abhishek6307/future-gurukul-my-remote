@@ -1,0 +1,333 @@
+url.sub-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.project-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(https://avishkaar-images.s3.ap-south-1.amazonaws.com/misc/projects/banner.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 50%;
+    background-color: #9bc157;
+    padding: 3rem 0 1.25rem;
+}
+
+.project-banner .projects-count {
+    font-size: 2.875rem;
+    color: #fff;
+    background-color: #015ea2;
+    border-radius: 4px;
+    padding: 0 1rem;
+}
+
+.project-banner .banner-title {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0.5rem 0;
+    width: 90%;
+    text-align: center;
+}
+
+.project-banner .banner-description {
+    font-weight: 400;
+    color: #fff;
+    width: 90%;
+    text-align: center;
+}
+
+.project-banner .button-container {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.project-banner .button-container .white-button {
+    color: #f36f2e;
+    background-color: #fff;
+}
+
+.project-banner .button-container .blue-button {
+    margin: 0 0.5rem;
+    padding: 1rem 0;
+    width: 14rem;
+}
+
+.project-banner .button-container button:hover {
+    cursor: pointer;
+}
+
+.project-banner .upload-mobile {
+    display: none;
+    background-color: #f36f2e;
+    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 7%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 10px;
+    bottom: 80px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.all-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.all-projects .all-projects-title {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 2rem 0;
+}
+
+.all-projects .all-projects-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    -moz-column-gap: 1.5rem;
+    column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    row-gap: 1.5rem;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 7px 10px 0 rgb(0 0 0 / 4%);
+}
+
+.project-card,
+.project-card .project-thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.project-card .project-thumbnail-container {
+    justify-content: center;
+    height: 200px;
+    position: relative;
+}
+
+.project-card .project-thumbnail-container .project-thumbnail {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.project-card .project-thumbnail-container .project-thumbnail .project-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.project-card .project-thumbnail-container .project-thumbnail-overlay {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .45);
+}
+
+.project-card .project-thumbnail-container .project-thumbnail-overlay .view-project {
+    font-size: .875rem;
+    color: #242424;
+    background-color: #fff;
+    border-radius: 333px;
+    padding: 0.75rem 2rem;
+}
+
+.project-card .project-thumbnail-container .project-thumbnail-overlay .date {
+    font-size: .875rem;
+    color: #fff;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+}
+
+.project-card .project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+}
+
+.project-card .project-details .project-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-card .project-details .project-utilities .utilities-actions {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.project-card .project-details .project-utilities .utilities-actions .utilities {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.project-card .project-details .project-utilities .utilities-actions .utilities .utilities-img {
+    margin-right: 0.5rem;
+}
+
+.project-card .project-details .project-utilities .utilities-actions .utilities .utilities-text {
+    font-size: .875rem;
+    color: #252525;
+}
+
+.project-card .project-details .project-name {
+    width: 100%;
+    color: #252525;
+    margin: 0.5rem 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.project-card .project-details .project-description {
+    width: 100%;
+    font-weight: 400;
+    font-size: .875rem;
+    color: #252525;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 2.625rem;
+}
+
+.project-card .project-foot {
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    border-top: 1px solid #e3e3e3;
+    margin-top: auto;
+    grid-gap: 0.5rem;
+    gap: 0.5rem;
+}
+
+.project-card .project-foot,
+.project-card .project-foot .project-uploaded-by {
+    display: flex;
+    align-items: center;
+}
+
+.project-card .project-foot .project-uploaded-by .uploaded-by-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.project-card .project-foot .project-uploaded-by .uploaded-by-text {
+    font-size: .875rem;
+    color: #252525;
+    font-weight: 400;
+}
+
+.project-card .project-foot .project-uploaded-by .uploaded-by-text span {
+    font-weight: 700;
+    word-wrap: anywhere;
+}
+
+.project-card .project-foot .skill {
+    font-size: .875rem;
+    border-radius: 333px;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+}
+
+.project-card:hover .project-thumbnail-overlay {
+    display: flex;
+}
+
+@media screen and (max-width: 750px) {
+    .project-banner {
+        background-image: url('https://avishkaar-images.s3.ap-south-1.amazonaws.com/misc/projects/banner-mobiles.png');
+        padding: 3rem 0 2rem;
+    }
+
+    .project-banner .banner-title {
+        margin: 2rem 0 1rem;
+    }
+
+    .project-banner .upload-mobile {
+        display: flex;
+    }
+
+    .project-banner .upload-button {
+        display: none;
+    }
+
+    .all-projects .all-projects-title {
+        font-size: 1.25rem;
+        width: 90%;
+    }
+
+    .project-card .project-details .project-name{
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .project-banner .projects-count {
+        font-size: 2.25rem;
+    }
+
+    .project-banner .banner-title {
+        font-size: 1.25rem;
+    }
+
+    .project-banner .banner-description {
+        font-size: 1rem;
+    }
+
+    .project-banner .button-container .orange-button {
+        padding: 0.75rem 0;
+    }
+
+    .project-banner .button-container .orange-button {
+        padding: 0.75rem 0;
+    }
+
+    .all-projects .all-projects-items {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .all-projects .all-projects-items {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+}
