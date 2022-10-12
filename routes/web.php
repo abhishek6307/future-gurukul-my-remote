@@ -16,6 +16,7 @@ use App\Http\Controllers\Backend\InnovatorController;
 use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\ShippingAreaController;
 use App\Http\Controllers\Backend\MapController;
+use App\Http\Controllers\Backend\EnquiryController;
 use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\AllCourseController;
@@ -657,3 +658,14 @@ Route::get('/privacy', function () {
 Route::get('/shipping', function () {
     return view('frontend.common.shipping');
 })->name('shipping');
+
+
+
+
+
+
+// enquiry form submission 
+Route::prefix('Enquiry')->group(function(){
+Route::post('/school',[EnquiryController::class, 'EnquirySchoolStore'])->name('school.enquiry');
+Route::post('/student',[PaytmController::class, 'payCourse'])->name('student.enquiry');
+});

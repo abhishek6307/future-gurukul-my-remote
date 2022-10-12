@@ -917,8 +917,8 @@
         display: inline;
         text-align: center;
         border: 1px solid #efefef;
-        background-image: #fff,
-        rgba(234, 26, 83 ,0.9),rgba(234, 26, 83 , 0.8));
+        background-image: #fff;
+        /* rgba(234, 26, 83 ,0.9),rgba(234, 26, 83 , 0.8)); */
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border-radius: 17px;
 
@@ -935,8 +935,7 @@
         width: 100%;
         text-align: center;
         border: 1px solid #efefef;
-        background-image: #fff,
-        rgba(234, 26, 83 ,0.9),rgba(234, 26, 83 , 0.8));
+        /* background-image: #fff, rgba(234, 26, 83 ,0.9),rgba(234, 26, 83 , 0.8)); */
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border-radius: 17px;
     }
@@ -1030,4 +1029,83 @@ background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, F
 /**** login  **/ 
 
 
+/* abhishek school-enquiry-modal buttons -s  */
 
+.school-enquiry-moodal-content{
+    border-radius: 34px;
+    width: 96%;
+}
+.school-enquiry-modal-title{
+  font-size: 23px;
+  text-align: center;
+}
+.school-enquiry-btn-close{
+  background-color: #a5b6af;
+  border-radius: 50%;
+}
+
+
+
+.inline{
+  max-width:400px;
+  margin:auto;
+}
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  /* margin-bottom: 5px; */
+}
+
+.icon {
+  top: 30px;
+  right: 35px;
+  /* padding: 10px; */
+  position: relative;
+  min-width: 40px;
+}
+.placeholder-names {
+  top: 35px;
+  padding:5px 10px;
+  position: relative;
+  min-width: 40px;
+}
+
+.input-field {
+  width: 100%;
+  font-size: 14px;
+  padding:5px 10px;
+  border-radius: 28px;
+  font-weight: 100;
+  /* margin-bottom: 3px; */
+}
+
+.button-submit-school-enquiry{
+  border-radius: 28px;
+  width: 100%;
+
+}
+.school-enquiry-modal-body{
+  padding: 0;
+}
+
+@media (max-width: 992px) {
+  .input-field {
+    width: 80%;
+ margin: 0 auto;
+    /* margin-bottom: 3px; */
+  }
+  .icon{
+    right: 0;
+  }
+  .button-submit-school-enquiry{
+    width: 80%;
+    margin: 0 23px;
+  }
+  .m-sm-l{
+    margin-left: 12px;
+  }
+}
+/* abhishek school-enquiry-modal buttons -e */
