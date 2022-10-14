@@ -1,0 +1,160 @@
+.profile-nav-box{
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+    
+}
+.btn-profile-nav{
+    color: rgb(0, 0, 0);
+    margin: 0px -16px;
+    border-radius: 0;
+    
+
+}
+.btn-profile-nav:hover, .btn-profile-nav:active, .btn-profile-nav:focus, .btn-profile-nav:focus-visible, .btn-profile-nav:active{
+    color: rgb(255, 255, 255);
+    margin: 0px -16px;
+  
+    border-radius: 0;
+    background: -webkit-linear-gradient(to right, #113d9c, #1876b4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #017ddd, #1876b4); 
+
+}
+.profile-btn-active{
+    background: linear-gradient(to right, #017ddd, #1876b4); 
+}
+.profile-nav-image{
+    border-radius: 50%;
+    width: 90%;
+    height: 20%;
+    margin: 0 auto;
+
+}
+
+.content-btn-profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.profile-card{
+
+    width: 55%;
+    margin: 0 auto;
+}
+.order-table-card{
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+.profile-all-input {
+    border-radius: 20px;
+    width: 100%;
+}
+.profile-update-button{
+    width: 32%;
+    margin: 9px 113px;
+    border-radius: 20px;
+    background: -webkit-linear-gradient(to right, #017ddd, #017dee);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #017ddd, #1876b4); 
+}
+.profile-password-change-button{
+    width: 25%;
+    margin: 0 99px;
+    border-radius: 20px;
+    background: -webkit-linear-gradient(to right, #017ddd, #017dee);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #017ddd, #1876b4); 
+}
+.profile-top-text{
+    display: flex;
+    font-size: 30px;
+    height: 84px;
+    padding: 20px;
+
+
+}
+.row-profile-form{
+
+}
+.profile-change-password-card-body{
+    width: 150%;
+}
+
+@media (max-width: 768px) {
+    .profile-nav-image{
+        width: 50%;
+        height: 20%;
+        margin: 0 55px;
+    }
+    .profile-nav-box{
+      margin-bottom: 2rem;
+        width: 45%;
+    }
+    .Update-profile-heading{
+        font-size: 20px;
+    }
+    .change-password-heading{
+        font-size: 20px;
+    }
+    .profile-all-input {
+   
+        font-size: 15px;
+    }
+
+    .labels-change-password{
+        font-size: 16px;
+    }
+    .row-profile-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+@media (max-width: 600px) {
+ .profile-update-button{
+    width: 43%;
+    margin: 9px 73px;
+
+ }
+ .profile-all-input {
+   
+    font-size: 13px;
+}
+.labels-change-password{
+    font-size: 14px;
+}
+.profile-password-change-button{
+    width: 28%;
+    margin: 0 59px;
+}
+  }
+@media (max-width: 500px) {
+    .profile-nav-image{
+   
+        margin: 0 55px;
+    }
+    .profile-nav-box{
+      
+        width: 75%;
+    }
+    .profile-card {
+        width: 90%;
+    }    
+    .Update-profile-heading{
+        font-size: 16px;
+    }
+    .change-password-heading{
+        font-size: 16px;
+    }
+    .labels-change-password{
+        font-size: 13px;
+    }
+    .profile-password-change-button{
+   
+    margin: 0 78px;
+    }
+
+  }

@@ -1109,3 +1109,23 @@ background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, F
   }
 }
 /* abhishek school-enquiry-modal buttons -e */
+
+
+/* abhishek testimonial prev next button -s */
+.fa-chevron-right, .fa-chevron-left{
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.carousel-control-next:hover, .carousel-control-prev:hover{
+  color: #000;
+}
+
+/* abhishek testimonial prev next button -e */
+
+/* abhishek partner prev  button -s */
+.slick-prev {
+  top: 102px;
+}
+
+/* abhishek partner prev  button -e */

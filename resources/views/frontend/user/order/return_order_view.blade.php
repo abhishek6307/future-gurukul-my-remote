@@ -1,15 +1,14 @@
 @extends('frontend.main_master')
 @section('content')
-
-<div class="body-content">
-  <div class="container">
-    <div class="row">
+<div class="body-container" style="margin-top:100px">
+    <div class="container profile-update-container" >
+   
+        <div class="row row-profile-form ">
        @include('frontend.common.user_sidebar')
 
-       <div class="col-md-2">
-       </div>
+     
 
-       <div class="col-md-8">
+       <div class="col-md-8 order-table-card">
 
         <div class="table-responsive">
           <table class="table">
@@ -46,7 +45,7 @@
               </tr>
 
 
-              @foreach($orders as $order)
+              @forelse($orders as $order)
        <tr>
                 <td class="col-md-1">
                   <label for=""> {{ $order->order_date }}</label>
@@ -89,7 +88,10 @@
          
                 
               </tr>
-              @endforeach
+              @empty
+              <h4 class="text-danger">Order Not Found</h4>
+
+              @endforelse
 
 
 

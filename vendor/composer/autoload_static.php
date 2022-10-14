@@ -699,7 +699,7 @@ class ComposerStaticInitaae69780ef35d5265697937522d96be4
         'App\\Models\\Course' => __DIR__ . '/../..' . '/app/Models/Course.php',
         'App\\Models\\CourseCategory' => __DIR__ . '/../..' . '/app/Models/CourseCategory.php',
         'App\\Models\\EnquireSchool' => __DIR__ . '/../..' . '/app/Models/EnquireSchool.php',
-        'App\\Models\\Enquiryschool' => __DIR__ . '/../..' . '/app/Models/Enquiryschool.php',
+        'App\\Models\\EnquireStudent' => __DIR__ . '/../..' . '/app/Models/EnquireStudent.php',
         'App\\Models\\Enroll' => __DIR__ . '/../..' . '/app/Models/Enroll.php',
         'App\\Models\\EnrolledCourse' => __DIR__ . '/../..' . '/app/Models/EnrolledCourse.php',
         'App\\Models\\Innovator' => __DIR__ . '/../..' . '/app/Models/Innovator.php',

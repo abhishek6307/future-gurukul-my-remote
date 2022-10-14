@@ -2,38 +2,9 @@
 @section('content')
 
     
-<section class="login-form-bg">
-    <div class="container">
-    <div id="card">
-    <div id="card-content">
-      <div id="card-title">
-        <h4>LOGIN</h4>
-        <div class="underline-title"></div>
-      </div>
-      <form method="post" class="form">
-        <label for="user-email" style="padding-top:13px">
-            &nbsp;Email
-          </label>
-        <input id="user-email" class="form-content" type="email" name="email" autocomplete="on" required />
-        <div class="form-border"></div>
-        <label for="user-password" style="padding-top:22px">&nbsp;Password
-          </label>
-        <input id="user-password" class="form-content" type="password" name="password" required />
-        <div class="form-border"></div>
-        <a href="#">
-          <legend id="forgot-pass">Forgot password?</legend>
-        </a>
-        <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
-        <div style="margin-top: 3px; padding-bottom:20px; text-align: center;">
-        <a href="#" id="signup" >Don't have account yet?</a>
-    </div>
-      </form>
-    </div>
-  </div>
-</div>
-</section>
 
-<!----  <section class=" login-section">
+
+ <section class=" login-section">
         <div class="container-fluid h-custom">
             <div class="row d-flex justify-content-center align-items-center h-100">
 
@@ -106,11 +77,11 @@
             </div>
         </div>
     
-    </section>  -->
+    </section>  
 
 
 <!------ register model --->
- <!--- <div class="modal fade" id="myModalCourse">
+<div class="modal fade" id="myModalCourse">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
       
@@ -200,7 +171,7 @@
         
       </div>
     </div>
- </div>  --->
+ </div>  
 <!------ register model end --->
 
 @endsection

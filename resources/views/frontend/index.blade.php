@@ -72,34 +72,37 @@ Future Gurukuls - Robotics & Coding For Kids
             </div>
         </div>
     </div>
-
-
-    <div class="call-form">
-        <div class="form-head-content">
-            Want to know how Future Gurukuls can help your child
-            <span class="highlight"> gain the edge?</span>
-        </div>
-
-        <div class="form-input-container">
-            <input placeholder="Name" type="text" name="Name_First" class="request-input content">
-            <input placeholder="Mobile" type="text" name="PhoneNumber_countrycode" class="request-input content">
-        </div>
-
-        <div class="connect content">
-            <input type="checkbox" name="Checkbox" value="true" checked="checked" class="connect-input">
-            <div class="connect-content content">Want to be part of WhatsApp Community?</div>
-            <img loading="lazy" src="https://images.avishkaar.cc/misc/home.avishkaar.cc/home/whatsapp-icon.webp"
-                alt="Whatsapp" width="20">
-        </div>
-
-        <div class="support content">
-            <input type="checkbox" name="Checkbox1" value="true" class="connect-input">
-            <div class="connect-content content">Need support for an already bought FG product or course?
+    <form action="{{route('student.enquiry')}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="call-form">
+            <div class="form-head-content">
+                Want to know how Future Gurukuls can help your child
+                <span class="highlight"> gain the edge?</span>
             </div>
-        </div>
 
-        <button type="submit" class="blue-button">Request a Call</button>
-    </div>
+            <div class="form-input-container">
+                <input placeholder="Name" type="text" name="name" class="request-input content">
+                <input placeholder="Mobile" type="text" name="number" class="request-input content">
+            </div>
+
+            <div class="connect content">
+                <input type="checkbox" name="CheckboxWhatsapp" value="true" checked="checked" class="connect-input">
+                <div class="connect-content content">Want to be part of WhatsApp Community?</div>
+                <img loading="lazy" src="https://images.avishkaar.cc/misc/home.avishkaar.cc/home/whatsapp-icon.webp"
+                    alt="Whatsapp" width="20">
+            </div>
+
+            <div class="support content">
+                <input type="checkbox" name="CheckboxSupport" value="true" class="connect-input">
+                <div class="connect-content content">Need support for an already bought FG product or course?
+                </div>
+            </div>
+
+            <button type="submit" class="blue-button">Request a Call</button>
+        </div>
+    </form>
+
+
 
 </section>
 
@@ -615,7 +618,17 @@ $catwiseProduct = App\Models\Product::where('category_id',$id)->orderBy('id','DE
                                                         <h4>Mrs. Mayuri Tiwari</h4>
                                                         <h6>Principal, Rameshwar Prasad Satya Narayan Inter College,
                                                             Ayodhya</h6>
-                                                        <p></p>
+                                                        <p>Every School should adopt FG lab, its a lab where students
+                                                            are getting true learning by making practical things, it was
+                                                            unbelievable that a 8th class students are building Robots,
+                                                            I was surprise to see that how this lab is making real life
+                                                            Problem Solver, the curriculum and teaching technique of
+                                                            this lab making students more creative and improving the
+                                                            logical thinking.
+                                                            most importantly it is attracting students to learn and
+                                                            understand the concept of classroom and they are
+                                                            implementing their knowledge in building real life projects.
+                                                        </p>
                                                     </div>
 
 
@@ -641,7 +654,13 @@ $catwiseProduct = App\Models\Product::where('category_id',$id)->orderBy('id','DE
                                                     <div class="testinomial-text">
                                                         <h4>Mr. Prabhat Kumar Pandey</h4>
                                                         <h6>Principal, V.N.J.Inter College,Ratanpur,Nautanwa</h6>
-                                                        <p></p>
+                                                        <p>We are located in very rural part and i never thought that my
+                                                            students can get a proper introduction and learning of 21st
+                                                            century's skills but FG lab provides a great exposure to our
+                                                            students, they are building lot of smart gadgets, Real life
+                                                            projects, Softwares etc. which can help people. we found a
+                                                            fire of innovation in our students and all credit goes to
+                                                            whole team of Future Gurukuls.</p>
                                                     </div>
 
 
@@ -667,11 +686,15 @@ $catwiseProduct = App\Models\Product::where('category_id',$id)->orderBy('id','DE
                                                     <div class="testinomial-text">
                                                         <h4>Mrs. Anjana Pandey</h4>
                                                         <h6>MD, Prema Educational Academy, Menhadawal</h6>
-                                                        <p>At vero eos et accusamus et iusto odio dignissimos qui
-                                                            blanditiis praesentium voluptatum deleniti atque corrupti
-                                                            quos dolores et quas molestias excepturi sint occaecati
-                                                            cupiditate non provident, similique sunt in culpa qui
-                                                            officia mollitia animi id laborum et dolorum fuga.</p>
+                                                        <p>We have installed FG lab in our Campus and it was shocking to
+                                                            see that my students are making Robots, Drone and other
+                                                            smart devices.
+                                                            This lab introduces a new dimension of science to students,
+                                                            It was my dream that in my school students can build real
+                                                            life projects and they can fly drones and it is happening
+                                                            now.
+                                                        </p>
+                                                        <p> Thanks to Future Gurukuls and team.</p>
                                                     </div>
 
 
@@ -683,12 +706,12 @@ $catwiseProduct = App\Models\Product::where('category_id',$id)->orderBy('id','DE
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleControls2" role="button"
                                 data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <i class="fas fa-chevron-left"></i>
                                 <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#carouselExampleControls2" role="button"
                                 data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <i class="fas fa-chevron-right"></i>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
@@ -702,133 +725,148 @@ $catwiseProduct = App\Models\Product::where('category_id',$id)->orderBy('id','DE
             </div>
         </div>
         <!-- abhishek chaubey scool enquiry s-->
-       
+
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#schoolEnquiryFormModal">
             Enquire Now
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="schoolEnquiryFormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="schoolEnquiryFormModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content school-enquiry-moodal-content">
                     <div class="modal-header border-0">
-                        <h5 class="modal-title school-enquiry-modal-title" id="exampleModalLabel">GIVE YOUR SCHOOL THE LEAD ADVANTAGE</h5>
-                        <button type="button" class="btn-close school-enquiry-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title school-enquiry-modal-title" id="exampleModalLabel">GIVE YOUR SCHOOL THE
+                            LEAD ADVANTAGE</h5>
+                        <button type="button" class="btn-close school-enquiry-btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body school-enquiry-modal-body">
-                    <form action="{{route('school.enquiry')}}" method="POST" enctype="multipart/form-data" class="inline">
-                    @csrf
+                        <form action="{{route('school.enquiry')}}" method="POST" enctype="multipart/form-data"
+                            class="inline">
+                            @csrf
 
-                    <div class="input-icons">       
-                                     
-                    <i class="fa-solid fa-users icon"></i>
-                                        <select class="form-select input-field" aria-label="Default select example" name="role_at_school">
-                                            <option selected>Role at School*</option>
-                                            <option value="School Owner">School Owner</option>
-                                            <option value="Trustee">Trustee</option>
-                                            <option value="Principal">Principal</option>
-                                            <option value="Vice Principal">Vice Principal</option>
-                                            <option value="Director">Director</option>
-                                            <option value="Teacher">Teacher</option>
-                                            </select>
-                                            @error('role_at_school') <small class="text-danger">{{$message}}</small> @enderror
-                                      
-                                            <span class="fa-solid fa-user icon"></span>
-                                          <input type="text" class="form-control input-field" id="name" name="name" required placeholder="Name*">
-                                          @error('name') <small class="text-danger">{{$message}}</small> @enderror
-                                     
-                                
-                                        <i class="fa-solid fa-phone icon"></i>
-                                          <input type="text" class="form-control input-field" id="mobile" name="number" required placeholder="Phone Number*">
-                                          @error('number') <small class="text-danger">{{$message}}</small> @enderror
-                                    
-                                       
-                                        <i class="fa-solid fa-envelope icon"></i>
-                                            <input type="email" class="form-control input-field" id="email" name="email" required placeholder="Email*">
-                                            @error('email') <small class="text-danger">{{$message}}</small> @enderror
-                                
-                                        <i class="fa-solid fa-map-location icon"></i>
-                                            <select class="form-select input-field" aria-label="Default select example" name="state_name">
-                                            <option selected>School in which state*</option>
-                                            <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                            
-                                            <option value="Assam">Assam</option>
-                                            <option value="Chandigarh">Chandigarh</option>
-                                            <option value="Chhattisgarh">Chhattisgarh</option>
-                                            <option value="Dadra & Nagar Haveli">Dadra & Nagar Haveli </option>
-                                            <option value="Daman & Diu">Daman & Diu</option>
-                                            <option value="Delhi">Delhi</option>
-                                            <option value="Gujarat">Gujarat</option>
-                                            <option value="Haryana">Haryana</option>
-                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                                            <option value="Jharkhand">Jharkhand</option>
-                                            <option value="Karnataka">Karnataka</option>
-                                            <option value="Kerala">Kerala</option>
-                                            <option value="Ladakh">Ladakh</option>
-                                            <option value="Lakshadweep">Lakshadweep</option>
-                                            <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                            <option value="Maharashtra">Maharashtra</option>
-                                            <option value="Manipur">Manipur</option>
-                                            <option value="Meghalaya">Meghalaya</option>
-                                            <option value="Mizoram">Mizoram</option>
-                                            <option value="Nagaland">Nagaland</option>
-                                            <option value="Odisha">Odisha</option>
-                                            <option value="Puducherry">Puducherry</option>
-                                            <option value="Punjab">Punjab</option>
-                                            <option value="Rajasthan">Rajasthan</option>
-                                            <option value="Sikkim">Sikkim</option>
-                                            <option value="Tamil Nadu">Tamil Nadu</option>
-                                            <option value="Telangana">Telangana</option>
-                                            <option value="Tripura">Tripura</option>
-                                            <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                            <option value="Uttarakhand">Uttarakhand</option>
-                                            <option value="West Bengal">West Bengal</option>
-                                            </select>
-                                            @error('state_name') <small class="text-danger">{{$message}}</small> @enderror
-                                
-                                
-                                            <i class="fa-solid fa-arrow-right icon"></i>
-                                            <select class="form-select input-field" aria-label="Default select example" name="school_medium">
-                                            <option selected>Is Your school English medium ?*</option>
-                                            <option value="Hindi">Hindi Medium</option>
-                                            <option value="English">English Medium</option>
-                                            <option value="Other">Other</option>
-                                           
-                                            </select>
-                                            @error('school_medium') <small class="text-danger">{{$message}}</small> @enderror
-                            
-                           
-                                            <i class="fa-solid fa-people-group icon"></i>
-                                            <select class="form-select input-field" aria-label="Default select example" name="students_strength">
-                                            <option selected>No. of Students in your School*</option>
-                                            <option value="Less than 200<">Less than 200</option>
-                                            <option value="200 to 400">200 to 400</option>
-                                            <option value="400 to 800<">400 to 800</option>
-                                            <option value="800 to 1500">800 to 1500</option>
-                                            <option value="More than 1500">More than 1500</option>
-                                       
-                                            </select>
-                                            @error('students_strength') <small class="text-danger">{{$message}}</small> @enderror
-                                 
-                                        <div class="mt-3 m-sm-l form-check">                                   
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="auth_phone" checked>
-                                            <label class="form-check-label" for="exampleCheck1">I agree to receive communications by WhatsApp / SMS / RCS</label>
-                                            @error('auth_phone') <small class="text-danger">{{$message}}</small> @enderror
-                                        </div>
-                                        <button type="submit" class="btn btn-primary btn-modal-bn mb-3 button-submit-school-enquiry">Book Now</button>
-                                        </div>
-                                      </form>
-                                      <form class="inline">
-       
+                            <div class="input-icons">
 
-   
- 
+                                <i class="fa-solid fa-users icon"></i>
+                                <select class="form-select input-field" aria-label="Default select example"
+                                    name="role_at_school">
+                                    <option selected>Role at School*</option>
+                                    <option value="School Owner">School Owner</option>
+                                    <option value="Trustee">Trustee</option>
+                                    <option value="Principal">Principal</option>
+                                    <option value="Vice Principal">Vice Principal</option>
+                                    <option value="Director">Director</option>
+                                    <option value="Teacher">Teacher</option>
+                                </select>
+                                @error('role_at_school') <small class="text-danger">{{$message}}</small> @enderror
+
+                                <span class="fa-solid fa-user icon"></span>
+                                <input type="text" class="form-control input-field" id="name" name="name" required
+                                    placeholder="Name*">
+                                @error('name') <small class="text-danger">{{$message}}</small> @enderror
+
+
+                                <i class="fa-solid fa-phone icon"></i>
+                                <input type="text" class="form-control input-field" id="mobile" name="number" required
+                                    placeholder="Phone Number*">
+                                @error('number') <small class="text-danger">{{$message}}</small> @enderror
+
+
+                                <i class="fa-solid fa-envelope icon"></i>
+                                <input type="email" class="form-control input-field" id="email" name="email" required
+                                    placeholder="Email*">
+                                @error('email') <small class="text-danger">{{$message}}</small> @enderror
+
+                                <i class="fa-solid fa-map-location icon"></i>
+                                <select class="form-select input-field" aria-label="Default select example"
+                                    name="state_name">
+                                    <option selected>School in which state*</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+
+                                    <option value="Assam">Assam</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Dadra & Nagar Haveli">Dadra & Nagar Haveli </option>
+                                    <option value="Daman & Diu">Daman & Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Ladakh">Ladakh</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                                @error('state_name') <small class="text-danger">{{$message}}</small> @enderror
+
+
+                                <i class="fa-solid fa-arrow-right icon"></i>
+                                <select class="form-select input-field" aria-label="Default select example"
+                                    name="school_medium">
+                                    <option selected>Is Your school English medium ?*</option>
+                                    <option value="Hindi">Hindi Medium</option>
+                                    <option value="English">English Medium</option>
+                                    <option value="Other">Other</option>
+
+                                </select>
+                                @error('school_medium') <small class="text-danger">{{$message}}</small> @enderror
+
+
+                                <i class="fa-solid fa-people-group icon"></i>
+                                <select class="form-select input-field" aria-label="Default select example"
+                                    name="students_strength">
+                                    <option selected>No. of Students in your School*</option>
+                                    <option value="Less than 200">Less than 200</option>
+                                    <option value="200 to 400">200 to 400</option>
+                                    <option value="400 to 800<">400 to 800</option>
+                                    <option value="800 to 1500">800 to 1500</option>
+                                    <option value="More than 1500">More than 1500</option>
+
+                                </select>
+                                @error('students_strength') <small class="text-danger">{{$message}}</small> @enderror
+
+                                <div class="mt-3 m-sm-l form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="auth_phone"
+                                        checked>
+                                    <label class="form-check-label" for="exampleCheck1">I agree to receive
+                                        communications by WhatsApp / SMS / RCS</label>
+                                    @error('auth_phone') <small class="text-danger">{{$message}}</small> @enderror
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-primary btn-modal-bn mb-3 button-submit-school-enquiry">Book
+                                    Now</button>
+                            </div>
+                        </form>
+                        <form class="inline">
+
+
+
+
                     </div>
-                  
+
                 </div>
             </div>
         </div>

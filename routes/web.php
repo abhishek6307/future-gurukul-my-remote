@@ -666,6 +666,8 @@ Route::get('/shipping', function () {
 
 // enquiry form submission 
 Route::prefix('Enquiry')->group(function(){
+Route::get('/viewschool',[EnquiryController::class, 'SchoolEnquiryView'])->name('all.schoolEnquiry'); 
+Route::get('/viewstudent',[EnquiryController::class, 'StudentEnquiryView'])->name('all.StudentEnquiry'); 
 Route::post('/school',[EnquiryController::class, 'EnquirySchoolStore'])->name('school.enquiry');
-Route::post('/student',[PaytmController::class, 'payCourse'])->name('student.enquiry');
+Route::post('/student',[EnquiryController::class, 'EnquiryStudentStore'])->name('student.enquiry');
 });

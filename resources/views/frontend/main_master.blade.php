@@ -62,6 +62,7 @@ $seo = App\Models\Seo::find(1);
     
         <link rel="stylesheet" type="text/css" href="{{asset('fronten/assets/css/shop.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('fronten/assets/css/fgstyle.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('fronten/assets/css/profileview.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('fronten/assets/css/product_detail.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('fronten/assets/css/atl.css')}}" />
    <link rel="stylesheet" type="text/css" href="{{asset('fronten/assets/css/tailwind.css')}}" />  

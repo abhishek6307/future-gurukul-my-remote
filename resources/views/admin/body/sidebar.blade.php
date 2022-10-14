@@ -280,6 +280,30 @@
        
        </li> 
 
+
+       <!-- abhishek chaubey -s -->
+       <li class="treeview {{ ($prefix == '/Enquiry')?'active':'' }}  ">
+          <a href="#">
+            <i data-feather="video"></i>
+            <span>Enquiry</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="{{ ($route == 'add-course')? 'active':'' }}"><a href="{{ route('all.schoolEnquiry') }}"><i class="ti-more"></i>School Enquiry</a></li>
+
+             <li class="{{ ($route == 'manage-course')? 'active':'' }}"><a href="{{ route('all.StudentEnquiry') }}"><i class="ti-more"></i>Students Enquiry</a></li>
+
+         
+
+          </ul>
+       
+       </li> 
+
+
+       <!-- abhishek chaubey -s -->
+
 		 
         <li class="header nav-small-cap">User Interface</li>
 		  

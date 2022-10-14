@@ -83,7 +83,7 @@ return array(
     'App\\Models\\Course' => $baseDir . '/app/Models/Course.php',
     'App\\Models\\CourseCategory' => $baseDir . '/app/Models/CourseCategory.php',
     'App\\Models\\EnquireSchool' => $baseDir . '/app/Models/EnquireSchool.php',
-    'App\\Models\\Enquiryschool' => $baseDir . '/app/Models/Enquiryschool.php',
+    'App\\Models\\EnquireStudent' => $baseDir . '/app/Models/EnquireStudent.php',
     'App\\Models\\Enroll' => $baseDir . '/app/Models/Enroll.php',
     'App\\Models\\EnrolledCourse' => $baseDir . '/app/Models/EnrolledCourse.php',
     'App\\Models\\Innovator' => $baseDir . '/app/Models/Innovator.php',
