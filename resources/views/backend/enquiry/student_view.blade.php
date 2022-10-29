@@ -27,6 +27,8 @@
                                
                                         <th>Name</th>
                                         <th>Number</th>
+                                        <th>Email</th>
+                                        <th>State</th>
                                         <th>Whatsapp Auth</th>
                                         <th>Support Auth</th>
                                       
@@ -41,6 +43,8 @@
                                     
                                         <td>{{$item->name}}</td>
                                         <td>{{$item->number}}</td>
+                                        <td>{{$item->email}}</td>
+                                        <td>{{$item->state}}</td>
                                         <td>{{$item->CheckboxWhatsapp}}</td>
                                         <td>{{$item->CheckboxSupport}}</td>
                                        

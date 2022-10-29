@@ -37,6 +37,8 @@ class EnquiryController extends Controller
       
         'name' => $request->name,
         'number' => $request->number,      
+        'email' => $request->email,      
+        'state' => $request->state,      
        ]);
        return redirect()->back();
 }

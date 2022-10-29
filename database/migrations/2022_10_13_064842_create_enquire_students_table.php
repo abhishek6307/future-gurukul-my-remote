@@ -19,6 +19,8 @@ class CreateEnquireStudentsTable extends Migration
             $table->string('number');
             $table->tinyInteger('CheckboxWhatsapp')->default('1')->comment('0=Not-authorize,1=Authorize');
             $table->tinyInteger('CheckboxSupport')->default('1')->comment('0=Not-authorize,1=Authorize');
+            $table->string('email');
+            $table->string('state');
             $table->timestamps();
         });
     }

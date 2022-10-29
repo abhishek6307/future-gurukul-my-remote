@@ -83,6 +83,12 @@ Future Gurukuls - Robotics & Coding For Kids
             <div class="form-input-container">
                 <input placeholder="Name" type="text" name="name" class="request-input content">
                 <input placeholder="Mobile" type="text" name="number" class="request-input content">
+                <input placeholder="Email" type="email" name="email" class="request-input content">
+                <select name="state">
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+     
+                </select>
             </div>
 
             <div class="connect content">
