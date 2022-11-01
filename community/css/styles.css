@@ -1,0 +1,254 @@
+
+body {
+    background-color: white;
+  }
+  .text-primary{
+    color: darkblue;
+  }
+  
+  .cover-image {
+    height: 100%;
+    width: 100%;
+  }
+  
+  video {
+    height: 300px;
+    /* margin-top: 30px; */
+  }
+  
+  .sb-sidenav-menu {
+    width: 370px;
+  
+  }
+  
+  .below-video,
+  video {
+    width: 532px;
+    background-color: #ffffff21; color: rgb(0, 0, 0);
+  }
+  
+  .main-nav {
+    position: fixed !important;
+  }
+  
+  .btn-buttons {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .cards-community{
+    width: 33.4rem;
+    background-color: #ffffff;
+  color: black;
+  border: 1px solid rgb(170, 170, 192);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 255, 0.19);
+  border-radius: 3%;
+  
+  }
+  .card-top-content{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+  .card-profile-image{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 12px 18px 6px 13px;
+  }
+  .card-heading{
+    padding-top: 12px;
+  padding-left: 76px;
+  
+  }
+  
+  .below-video {
+    position: relative;
+    bottom: 16px;
+    right: 17px;
+  }
+  
+  .video-container {
+    margin: 0 auto;
+    width: 43%;
+  }
+  .sb-sidenav-menu{
+        background-color:white;
+        border-radius: 3%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 255, 0.19);
+  }
+  .vdo-feed{
+        padding:5px 17px;
+        font-size: 20px;
+  }
+  .border-start-4{
+    margin-left: 22px;
+    margin-bottom: 4px;
+    border-left: 4px solid rgb(199, 186, 186);
+  }
+  .below-video-text{
+  font-size: 13px;
+  margin-left: 5px;
+  }
+  
+  
+  .font-lg-size{
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .btn-below-name{
+    width: 35%;
+    height: 40px;
+    
+  }
+  .font-sm-size{
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .btn-bg-darkblue{
+    background-color: darkblue;
+  }
+  .btn-bg-darkblue:active{
+    background-color: #0b0ba1;
+  }
+  .btn-bg-darkblue:hover{
+    background-color: #0b0ba1;
+  }
+  .btn-bg-darkblue:focus{
+    background-color: #0b0ba1;
+  }
+  .btn-top-upload-project{
+  
+   font-size: 17px;
+   margin-left: 12px;
+   font-weight: 500;
+  }
+  .fa-image{
+    margin-left: 13rem;
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .below-video {
+        justify-content: space-between !important;
+  
+    }
+  
+    .sb-sidenav-menu {
+        width: auto !important;
+    }
+  
+    .below-video,
+    video {
+        width: 333px;
+    }
+    .cards-community{
+    width: 21rem;
+    background-color: #4b336821;
+    margin: 0 auto;
+  
+  }
+  .fa-image{
+    margin-left: 8rem;
+  }
+  }
+  
+  @media only screen and (max-width: 992px) and (min-width: 767px) {
+  
+    .sb-side-nav {
+        width: 33%;
+    }
+  
+    .video-container {
+        width: 27%;
+    }
+  
+   
+  
+  
+  }
+  
+  
+  
+  @media only screen and (max-width: 767px) {
+  
+    .below-video,
+    video {
+        width: 429px;
+    }
+  
+    /* .cover-image {
+        width: 250px;
+        height: 120px;
+    } */
+    .profile-image {}
+  
+  
+    .fas {
+        background-color: darkblue;
+    }
+  
+    .main-nav {
+        position: relative !important;
+    }
+  
+    .video-container {
+        margin: 0px -22px;
+        width: 100%;
+    }
+    .cards-community{
+        width: 29rem;
+        margin: 0 auto;
+    }
+  
+    .below-video,
+    video {
+        width: 461px;
+    }
+  }
+  
+  @media only screen and (max-width: 505px) {
+    .cards-community{
+        width: 20.7rem;
+    }
+  
+    .below-video,
+    video {
+        width: 330px;
+    }
+  
+    /* .cover-image {
+        width: 111%;
+        height: 0%;
+    } */
+    .profile-image {
+        width: 170px;
+        height: 170px;
+        margin-top: -90px;
+    }
+  
+  
+    .video-container {
+        margin: 0px -22px;
+        width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 347px) {
+    .cards-community{
+        width: 15rem;
+        margin: 0 auto;
+    }
+  
+    .below-video,
+    video {
+        width: 240px;
+    }
+  
+    .profile-image {
+        width: 110px;
+        height: 110px;
+        margin-top: -70px;
+    }
+  
+  }
