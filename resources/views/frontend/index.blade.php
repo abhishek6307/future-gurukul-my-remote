@@ -736,6 +736,9 @@ $catwiseProduct = App\Models\Product::where('category_id',$id)->orderBy('id','DE
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#schoolEnquiryFormModal">
             Enquire Now
         </button>
+        <a href="{{url('chat/sendmessage')}}" type="button" class="btn btn-primary">
+                Chat
+        </a>
 
         <!-- Modal -->
         <div class="modal fade" id="schoolEnquiryFormModal" tabindex="-1" aria-labelledby="exampleModalLabel"

@@ -8,53 +8,67 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Dashboard - SB Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+ 
+    
+
 
 </head>
 
 <body>
 
 
+<div class="fgposts ">
+    
 
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Upload your Project</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content upload-project-modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel" style="width: 99%;font-weight: bolder;">Upload your Project</h5>
+                    <hr>
+                    <button type="button" class="btn-close upload-project-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="card-top-content">
+                            <img src="green.jfif" class="card-profile-image" alt="">
+                            <h6 class="">Abhishek Chaubey</h6>
+                        </div>
+                        <div class="border-start-4">
+                        
+                        </div>
+                        <input type="text" class="px-3 pb-5 my-4 about-project-input" placeholder="About Your Project...">
+                        <input type="file" class="form-control my-4" placeholder="Choose">
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                   
+                    <button class="btn btn-buttons btn-primary btn-below-name btn-bg-darkblue btn-sm"
+                        style="width: 100%;">Upload</button>
+
+
+
+
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-      <form action="">
-        <input type="file" class="form-control my-4">
-        <input type="text" class="form-control my-4" placeholder="About Your Project...">
-      </form>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-buttons btn-primary btn-below-name btn-bg-darkblue btn-sm"
-            style="width: 40%;"data-bs-dismiss="modal">Close</button>
-        <button class="btn btn-buttons btn-primary btn-below-name btn-bg-darkblue btn-sm"
-            style="width: 40%;">Upload</button>
-
-
-          
-
-        </div>
-      </div>
     </div>
-  </div>
 
-    <div class="container mt-4 ">
+    <div class="container mt-2 sidenavandvideo">
 
-        <div class="row row-flex ">
+        <div class="row">
 
 
-            <div class="col-md-3 ">
+            <div class="col-md-3 fgpostsnavcontainer">
 
 
                 <nav class="sb-sidenav sb-nav-fixed accordion main-nav" id="sidenavAccordion" style="height: 94%;">
@@ -68,25 +82,25 @@
                                     style="border-radius: 50%;margin-top: -70px;" height="150px" width="150px">
 
                             </a>
-                            <div class="text-center font-weight-ex-bold form-control-lg font-lg-size">Abhishek Chaubey
+                            <div class="text-center font-weight-ex-bold form-control-lg font-lg-size mx-5">Abhishek Chaubey
                             </div>
-                            <div class="small-btns d-flex align-items-center justify-content-around">
+                            <div class="small-btns d-flex align-items-center justify-content-around" style="width: 100%;">
                                 <button class="btn btn-buttons btn-primary btn-below-name btn-bg-darkblue btn-sm"
-                                    style="width: 40%;">Upload Project</button>
-                                <button class="btn btn-buttons btn-primary btn-below-name btn-bg-darkblue btn-sm"
-                                    style="width: 40%;">Project Feed</button>
+                                   >Upload Project</button>
+                                <button class="btn btn-buttons btn-primary btn-below-name btn-bg-darkblue btn-sm">Project Feed</button>
                             </div>
-                            <div class="mt-0 form-control-lg font-weight-bold school_name font-sm-size">
+                            <div class="mt-0 mx-5 form-control-lg font-weight-bold school_name font-sm-size">
                                 <i class="fas fa-graduation-cap"></i> School: Oxford Public School
                             </div>
-                            <div class="mt-0 form-control-lg font-weight-bold standard font-sm-size">
+                            <div class="mt-0 mx-5 form-control-lg font-weight-bold standard font-sm-size">
                                 <i class="fas fa-plus-circle"></i> Class : X
                             </div>
-                            <div class="mt-0 form-control-lg font-weight-bold name font-sm-size">
+                            <div class="mt-0 mx-5 form-control-lg font-weight-bold name font-sm-size">
                                 <i class="fas fa-map-marked-alt"></i> Address : Gorakhpur
                             </div>
-                            <button class="btn btn-buttons btn-primary btn-bg-darkblue btn-lg mt-2">Upload Project</button>
-                            <button class="btn btn-buttons btn-primary btn-bg-darkblue btn-lg mt-2 mb-4">Project Feed</button>
+                            <button class="btn btn-buttons btn-primary btn-bg-darkblue btn-sm my-3 p-2" style="border-radius: 24px;">Upload
+                                Project</button>
+                        
                         </div>
 
                     </div>
@@ -95,274 +109,270 @@
 
             </div>
 
-            <div class="video-container">
+            
 
 
-                <div class="container">
-                    <div class="row">
-                        <div>
-                            <div class="card cards-community mt-5" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <div class="video-container">
 
 
-                                <div class="font-weight-bold btn-top-upload-project ">Projects</div>
+    <div class="container below-video-container">
+        <div class="row">
+            <div class="vdobelowrowdiv" >
+                <div class="card cards-community mt-5" style="cursor: pointer;" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
 
 
-                                <div class="card-top-content">
-                                    <img src="green.jfif" class="card-profile-image" alt="">
-                                    <h6 class="">Upload new projects... </h6>
-                                    <div class="upload-img mx-2 my-2"><i class="fas fa-2x fa-image"></i></div>
-                                </div>
+                    <div class="font-weight-bold btn-top-upload-project ">Projects</div>
 
+
+                    <div class="card-top-content">
+                        <img src="green.jfif" class="card-profile-image" alt="">
+                        <h6 class="">Upload new projects... </h6>
+                        <div class="upload-img mx-2 my-2"><i class="fas fa-2x fa-image"></i></div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="card cards-community my-5">
+                    <div class="card-top-content">
+                        <img src="green.jfif" class="card-profile-image" alt="">
+                        <h6 class="">Abhishek Chaubey</h6>
+                    </div>
+                    <div class="border-start-4">
+                        <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
+                            <p class="m-0">Hello Coder</p>
+                            <p class="m-0">Here ia a Quote for you</p>
+                            <p class="m-0">Think twice code once</p>
+                            <p class="m-0">Think twice code once</p>
+                        </div>
+                    </div>
+                    <video controls>
+                        <source src="pexels-.mp4" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body">
+                        <hr>
+                        <div class="below-video d-flex align-items-center justify-content-around">
+
+                            <div class="vdo-feed like"> <i onclick="myFunction(this)"
+                                    class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
                             </div>
 
-
-                        
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-                            <div class="card cards-community my-5">
-                                <div class="card-top-content">
-                                    <img src="green.jfif" class="card-profile-image" alt="">
-                                    <h6 class="">Abhishek Chaubey</h6>
-                                </div>
-                                <div class="border-start-4">
-                                    <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
-                                        <p class="m-0">Hello Coder</p>
-                                        <p class="m-0">Here ia a Quote for you</p>
-                                        <p class="m-0">Think twice code once</p>
-                                        <p class="m-0">Think twice code once</p>
-                                    </div>
-                                </div>
-                                <video controls>
-                                    <source src="pexels-.mp4" type="video/mp4">
-
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="card-body">
-                                    <hr>
-                                    <div class="below-video d-flex align-items-center justify-content-around">
-
-                                        <div class="vdo-feed like"> <i onclick="myFunction(this)"
-                                                class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
-                                        </div>
-
-                                        <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
-                                                class="below-video-text">Share</i></div>
-                                        <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
-                                                class="below-video-text">Comment</i></div>
-
-                                    </div>
-                                    <hr class="bottom-hr" style="margin: -12px 0px;">
-                                    <div class="
-                                       mt-4">Hello There</div>
-                                </div>
-                            </div>
-
-                            <div class="card cards-community my-5">
-                                <div class="card-top-content">
-                                    <img src="green.jfif" class="card-profile-image" alt="">
-                                    <h6 class="">Abhishek Chaubey</h6>
-                                </div>
-                                <div class="border-start-4">
-                                    <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
-                                        <p class="m-0">Hello Coder</p>
-                                        <p class="m-0">Here ia a Quote for you</p>
-                                        <p class="m-0">Think twice code once</p>
-                                        <p class="m-0">Think twice code once</p>
-                                    </div>
-                                </div>
-                                <video controls>
-                                    <source src="scond.mp4" type="video/mp4">
-
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="card-body">
-                                    <hr>
-                                    <div class="below-video d-flex align-items-center justify-content-around">
-
-                                        <div class="vdo-feed like"> <i onclick="myFunction(this)"
-                                                class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
-                                        </div>
-
-                                        <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
-                                                class="below-video-text">Share</i></div>
-                                        <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
-                                                class="below-video-text">Comment</i></div>
-
-                                    </div>
-                                    <hr class="bottom-hr" style="margin: -12px 0px;">
-                                    <div class="
-                                       mt-4">Hello There</div>
-                                </div>
-                            </div>
-                            <div class="card cards-community my-5">
-                                <div class="card-top-content">
-                                    <img src="green.jfif" class="card-profile-image" alt="">
-                                    <h6 class="">Abhishek Chaubey</h6>
-                                </div>
-                                <div class="border-start-4">
-                                    <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
-                                        <p class="m-0">Hello Coder</p>
-                                        <p class="m-0">Here ia a Quote for you</p>
-                                        <p class="m-0">Think twice code once</p>
-                                        <p class="m-0">Think twice code once</p>
-                                    </div>
-                                </div>
-                                <video controls>
-                                    <source src="video.mp4" type="video/mp4">
-
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="card-body">
-                                    <hr>
-                                    <div class="below-video d-flex align-items-center justify-content-around">
-
-                                        <div class="vdo-feed like"> <i onclick="myFunction(this)"
-                                                class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
-                                        </div>
-
-                                        <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
-                                                class="below-video-text">Share</i></div>
-                                        <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
-                                                class="below-video-text">Comment</i></div>
-
-                                    </div>
-                                    <hr class="bottom-hr" style="margin: -12px 0px;">
-                                    <div class="
-                                       mt-4">Hello There</div>
-                                </div>
-                            </div>
-                            <div class="card cards-community my-5">
-                                <div class="card-top-content">
-                                    <img src="green.jfif" class="card-profile-image" alt="">
-                                    <h6 class="">Abhishek Chaubey</h6>
-                                </div>
-                                <div class="border-start-4">
-                                    <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
-                                        <p class="m-0">Hello Coder</p>
-                                        <p class="m-0">Here ia a Quote for you</p>
-                                        <p class="m-0">Think twice code once</p>
-                                        <p class="m-0">Think twice code once</p>
-                                    </div>
-                                </div>
-                                <video controls>
-                                    <source src="scond.mp4" type="video/mp4">
-
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="card-body">
-                                    <hr>
-                                    <div class="below-video d-flex align-items-center justify-content-around">
-
-                                        <div class="vdo-feed like"> <i onclick="myFunction(this)"
-                                                class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
-                                        </div>
-
-                                        <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
-                                                class="below-video-text">Share</i></div>
-                                        <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
-                                                class="below-video-text">Comment</i></div>
-
-                                    </div>
-                                    <hr class="bottom-hr" style="margin: -12px 0px;">
-                                    <div class="
-                                       mt-4">Hello There</div>
-                                </div>
-                            </div>
-                            <div class="card cards-community my-5">
-                                <div class="card-top-content">
-                                    <img src="green.jfif" class="card-profile-image" alt="">
-                                    <h6 class="">Abhishek Chaubey</h6>
-                                </div>
-                                <div class="border-start-4">
-                                    <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
-                                        <p class="m-0">Hello Coder</p>
-                                        <p class="m-0">Here ia a Quote for you</p>
-                                        <p class="m-0">Think twice code once</p>
-                                        <p class="m-0">Think twice code once</p>
-                                    </div>
-                                </div>
-                                <video controls>
-                                    <source src="pexels-.mp4" type="video/mp4">
-
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="card-body">
-                                    <hr>
-                                    <div class="below-video d-flex align-items-center justify-content-around">
-
-                                        <div class="vdo-feed like"> <i onclick="myFunction(this)"
-                                                class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
-                                        </div>
-
-                                        <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
-                                                class="below-video-text">Comment</i></div>
-                                        <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
-                                                class="below-video-text">Share</i></div>
-
-                                    </div>
-                                    <hr class="bottom-hr" style="margin: -12px 0px;">
-                                    <div class="
-                                       mt-4">Hello There</div>
-                                </div>
-                            </div>
-                            <div class="card cards-community my-5">
-                                <div class="card-top-content">
-                                    <img src="green.jfif" class="card-profile-image" alt="">
-                                    <h6 class="">Abhishek Chaubey</h6>
-                                </div>
-                                <div class="border-start-4">
-                                    <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
-                                        <p class="m-0">Hello Coder</p>
-                                        <p class="m-0">Here ia a Quote for you</p>
-                                        <p class="m-0">Think twice code once</p>
-                                        <p class="m-0">Think twice code once</p>
-                                    </div>
-                                </div>
-                                <video controls>
-                                    <source src="video.mp4" type="video/mp4">
-
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="card-body">
-                                    <hr>
-                                    <div class="below-video d-flex align-items-center justify-content-around">
-
-                                        <div class="vdo-feed like"> <i onclick="myFunction(this)"
-                                                class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
-                                        </div>
-
-                                        <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
-                                                class="below-video-text">Share</i></div>
-                                        <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
-                                                class="below-video-text">Comment</i></div>
-
-                                    </div>
-                                    <hr class="bottom-hr" style="margin: -12px 0px;">
-                                    <div class="
-                                       mt-4">Hello There</div>
-                                </div>
-                            </div>
-
-
+                            <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
+                                    class="below-video-text">Share</i></div>
+                            <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
+                                    class="below-video-text">Comment</i></div>
 
                         </div>
-
-
-
+                        <hr class="bottom-hr" style="margin: -12px 0px;">
+                        <div class="
+                           mt-4">Hello There</div>
                     </div>
                 </div>
+
+                <div class="card cards-community my-5">
+                    <div class="card-top-content">
+                        <img src="green.jfif" class="card-profile-image" alt="">
+                        <h6 class="">Abhishek Chaubey</h6>
+                    </div>
+                    <div class="border-start-4">
+                        <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
+                            <p class="m-0">Hello Coder</p>
+                            <p class="m-0">Here ia a Quote for you</p>
+                            <p class="m-0">Think twice code once</p>
+                            <p class="m-0">Think twice code once</p>
+                        </div>
+                    </div>
+                    <video controls>
+                        <source src="scond.mp4" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body">
+                        <hr>
+                        <div class="below-video d-flex align-items-center justify-content-around">
+
+                            <div class="vdo-feed like"> <i onclick="myFunction(this)"
+                                    class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
+                            </div>
+
+                            <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
+                                    class="below-video-text">Share</i></div>
+                            <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
+                                    class="below-video-text">Comment</i></div>
+
+                        </div>
+                        <hr class="bottom-hr" style="margin: -12px 0px;">
+                        <div class="
+                           mt-4">Hello There</div>
+                    </div>
+                </div>
+                <div class="card cards-community my-5">
+                    <div class="card-top-content">
+                        <img src="green.jfif" class="card-profile-image" alt="">
+                        <h6 class="">Abhishek Chaubey</h6>
+                    </div>
+                    <div class="border-start-4">
+                        <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
+                            <p class="m-0">Hello Coder</p>
+                            <p class="m-0">Here ia a Quote for you</p>
+                            <p class="m-0">Think twice code once</p>
+                            <p class="m-0">Think twice code once</p>
+                        </div>
+                    </div>
+                    <video controls>
+                        <source src="video.mp4" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body">
+                        <hr>
+                        <div class="below-video d-flex align-items-center justify-content-around">
+
+                            <div class="vdo-feed like"> <i onclick="myFunction(this)"
+                                    class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
+                            </div>
+
+                            <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
+                                    class="below-video-text">Share</i></div>
+                            <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
+                                    class="below-video-text">Comment</i></div>
+
+                        </div>
+                        <hr class="bottom-hr" style="margin: -12px 0px;">
+                        <div class="
+                           mt-4">Hello There</div>
+                    </div>
+                </div>
+                <div class="card cards-community my-5">
+                    <div class="card-top-content">
+                        <img src="green.jfif" class="card-profile-image" alt="">
+                        <h6 class="">Abhishek Chaubey</h6>
+                    </div>
+                    <div class="border-start-4">
+                        <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
+                            <p class="m-0">Hello Coder</p>
+                            <p class="m-0">Here ia a Quote for you</p>
+                            <p class="m-0">Think twice code once</p>
+                            <p class="m-0">Think twice code once</p>
+                        </div>
+                    </div>
+                    <video controls>
+                        <source src="scond.mp4" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body">
+                        <hr>
+                        <div class="below-video d-flex align-items-center justify-content-around">
+
+                            <div class="vdo-feed like"> <i onclick="myFunction(this)"
+                                    class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
+                            </div>
+
+                            <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
+                                    class="below-video-text">Share</i></div>
+                            <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
+                                    class="below-video-text">Comment</i></div>
+
+                        </div>
+                        <hr class="bottom-hr" style="margin: -12px 0px;">
+                        <div class="
+                           mt-4">Hello There</div>
+                    </div>
+                </div>
+                <div class="card cards-community my-5">
+                    <div class="card-top-content">
+                        <img src="green.jfif" class="card-profile-image" alt="">
+                        <h6 class="">Abhishek Chaubey</h6>
+                    </div>
+                    <div class="border-start-4">
+                        <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
+                            <p class="m-0">Hello Coder</p>
+                            <p class="m-0">Here ia a Quote for you</p>
+                            <p class="m-0">Think twice code once</p>
+                            <p class="m-0">Think twice code once</p>
+                        </div>
+                    </div>
+                    <video controls>
+                        <source src="pexels-.mp4" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body">
+                        <hr>
+                        <div class="below-video d-flex align-items-center justify-content-around">
+
+                            <div class="vdo-feed like"> <i onclick="myFunction(this)"
+                                    class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
+                            </div>
+
+                            <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
+                                    class="below-video-text">Comment</i></div>
+                            <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
+                                    class="below-video-text">Share</i></div>
+
+                        </div>
+                        <hr class="bottom-hr" style="margin: -12px 0px;">
+                        <div class="
+                           mt-4">Hello There</div>
+                    </div>
+                </div>
+                <div class="card cards-community my-5">
+                    <div class="card-top-content">
+                        <img src="green.jfif" class="card-profile-image" alt="">
+                        <h6 class="">Abhishek Chaubey</h6>
+                    </div>
+                    <div class="border-start-4">
+                        <div class="m" style="margin-left:12px ;margin-bottom: 6px;">
+                            <p class="m-0">Hello Coder</p>
+                            <p class="m-0">Here ia a Quote for you</p>
+                            <p class="m-0">Think twice code once</p>
+                            <p class="m-0">Think twice code once</p>
+                        </div>
+                    </div>
+                    <video controls>
+                        <source src="video.mp4" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body">
+                        <hr>
+                        <div class="below-video d-flex align-items-center justify-content-around">
+
+                            <div class="vdo-feed like"> <i onclick="myFunction(this)"
+                                    class="far p-1 fa-x fa-heart"></i><i class="below-video-text">Like</i>
+                            </div>
+
+                            <div class="vdo-feed comment"> <i class="fa fa-share"></i><i
+                                    class="below-video-text">Share</i></div>
+                            <div class="vdo-feed comment"> <i class="far fa-x fa-comment"></i><i
+                                    class="below-video-text">Comment</i></div>
+
+                        </div>
+                        <hr class="bottom-hr" style="margin: -12px 0px;">
+                        <div class="
+                           mt-4">Hello There</div>
+                    </div>
+                </div>
+
 
 
             </div>
@@ -371,12 +381,26 @@
 
         </div>
     </div>
+
+
+</div>
+
+
+
+        </div>
+    </div>
+
+
+</div>
+
     <script>
         function myFunction(x) {
             x.classList.toggle("fas,far");
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
     <script src="js/scripts.js"></script>
