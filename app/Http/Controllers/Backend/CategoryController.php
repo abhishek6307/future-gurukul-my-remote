@@ -107,7 +107,7 @@ class CategoryController extends Controller
             }
           
         }
-        $catwiseProduct = Product::where('category_id',$id)->orderBy('id','DESC')->get();
+        $catwiseProduct = Product::where('category_id',$id)->orderBy('created_at','DESC')->get();
 
         return view('frontend.kit.view_kit', compact('catwiseProduct'));
     }

@@ -83,7 +83,22 @@
 
         @else
         @endif
-		  
+
+        <li class="treeview {{($prefix == '/location')?'active':''}}">
+          <a href="#">
+            <i data-feather="mail"></i> <span>School Data</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="{{($route == 'all.states')?'active':''}}"><a href="{{route('all.states')}}"><i class="ti-more"></i>All States</a></li>
+            <li class="{{($route == 'all.cities')?'active':''}}"><a href="{{route('all.cities')}}"><i class="ti-more"></i>All Cities</a></li>
+            <li class="{{($route == 'all.schools')?'active':''}}"><a href="{{route('all.schools')}}"><i class="ti-more"></i>All Schools</a></li>
+            <li class="{{($route == 'all.enquiryschools')?'active':''}}"><a href="{{route('all.enquiryschools')}}"><i class="ti-more"></i>Enquired Schools</a></li>
+          
+          </ul>
+        </li>
 
       @if($product == true)
         <li class="treeview {{ ($prefix == '/product')?'active':'' }}  ">
@@ -294,6 +309,27 @@
             <li class="{{ ($route == 'add-course')? 'active':'' }}"><a href="{{ route('all.schoolEnquiry') }}"><i class="ti-more"></i>School Enquiry</a></li>
 
              <li class="{{ ($route == 'manage-course')? 'active':'' }}"><a href="{{ route('all.StudentEnquiry') }}"><i class="ti-more"></i>Students Enquiry</a></li>
+
+         
+
+          </ul>
+       
+       </li> 
+       <li class="treeview {{ ($prefix == '/chat')?'active':'' }}  ">
+          <a href="#">
+            <i data-feather="video"></i>
+            <span>Chats</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+         
+
+          
+
+
+
 
          
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\LocationController;
 use App\Http\Controllers\Backend\CourseCategoryController;
 use App\Http\Controllers\Backend\VideoController;
 use App\Http\Controllers\Backend\SubCategoryController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\ShippingAreaController;
 use App\Http\Controllers\Backend\MapController;
 use App\Http\Controllers\Backend\EnquiryController;
+use App\Http\Controllers\Backend\ChatController;
 use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\AllCourseController;
@@ -666,8 +668,56 @@ Route::get('/shipping', function () {
 
 // enquiry form submission 
 Route::prefix('Enquiry')->group(function(){
+
 Route::get('/viewschool',[EnquiryController::class, 'SchoolEnquiryView'])->name('all.schoolEnquiry'); 
 Route::get('/viewstudent',[EnquiryController::class, 'StudentEnquiryView'])->name('all.StudentEnquiry'); 
 Route::post('/school',[EnquiryController::class, 'EnquirySchoolStore'])->name('school.enquiry');
 Route::post('/student',[EnquiryController::class, 'EnquiryStudentStore'])->name('student.enquiry');
 });
+
+
+Route::prefix('chat')->group(function (){
+
+Route::get('/adminsendmessage',[ChatController::class, 'adminindex'])->name('all.adminsendmessage'); 
+Route::post('/sendmessage',[ChatController::class, 'adminstore'])->name('all.adminstoremessage'); 
+Route::get('/sendmessage',[ChatController::class, 'index'])->name('all.sendmessage'); 
+Route::post('/storemessage',[ChatController::class, 'store'])->name('all.storemessage'); 
+
+
+
+
+});
+
+
+
+// Route::controller(App\Http\Controllers\Backend\ChatController::class)->group(function (){
+//     Route::get('sendmessage','index');
+//     Route::post('sendmessage','store');
+//     Route::post('adminsendmessage','adminstore');
+//     Route::get('adminsendmessage','adminindex');
+// });
+
+
+
+Route::prefix('location')->group(function(){
+
+    Route::get('/states',[LocationController::class, 'statesView'])->name('all.states'); 
+    Route::get('/cities',[LocationController::class, 'citiesView'])->name('all.cities'); 
+    Route::get('/schools',[LocationController::class, 'schoolsView'])->name('all.schools'); 
+    Route::get('/enquiryschools',[LocationController::class, 'enquiryschoolsView'])->name('all.enquiryschools'); 
+    Route::get('/enquiryschools/edit/{id}',[LocationController::class, 'enquiryschoolsedit'])->name('enquiryschools.edit'); 
+
+
+
+    Route::post('/states/store',[LocationController::class, 'stateStore'])->name('states.store'); 
+    Route::post('/city/store',[LocationController::class, 'citystoStore'])->name('city.store'); 
+    Route::post('/schools/store',[LocationController::class, 'schoolStore'])->name('school.store'); 
+    Route::post('/enquiryschools/store',[LocationController::class, 'enquiryschoolsStore'])->name('enquiryschools.store'); 
+
+
+    Route::post('/enquiryschools/update',[LocationController::class, 'enquiryschoolsUpdate'])->name('enquiryschools.update'); 
+
+
+    Route::get('/city/ajax/{state_id}', [LocationController::class, 'GetCity']);
+    Route::get('/school/ajax/{city_id}', [LocationController::class, 'GetSchool']);
+    });
