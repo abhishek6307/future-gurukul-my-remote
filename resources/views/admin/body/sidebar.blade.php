@@ -95,7 +95,8 @@
             <li class="{{($route == 'all.states')?'active':''}}"><a href="{{route('all.states')}}"><i class="ti-more"></i>All States</a></li>
             <li class="{{($route == 'all.cities')?'active':''}}"><a href="{{route('all.cities')}}"><i class="ti-more"></i>All Cities</a></li>
             <li class="{{($route == 'all.schools')?'active':''}}"><a href="{{route('all.schools')}}"><i class="ti-more"></i>All Schools</a></li>
-            <li class="{{($route == 'all.enquiryschools')?'active':''}}"><a href="{{route('all.enquiryschools')}}"><i class="ti-more"></i>Enquired Schools</a></li>
+            <li class="{{($route == 'all.enquiryschools')?'active':''}}"><a href="{{route('all.enquiryschools')}}"><i class="ti-more"></i>Add School  Response </a></li>
+            <li class="{{($route == 'all.schoolResponseView')?'active':''}}"><a href="{{route('all.schoolResponseView')}}"><i class="ti-more"></i>View School  Response</a></li>
           
           </ul>
         </li>
@@ -397,7 +398,7 @@
           <a href="#">
             <i data-feather="file"></i>
             <span>All Reports </span>
-            <span class="pull-right-container">
+            <span class="pull-right-container"> 
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>

@@ -71,6 +71,25 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <h5>Email<span class="text-danger">*</span></h5>
+                                    <div class="controls">
+                                        <input type="email" name="email" class="form-control" required>
+                                        @error('email')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Phone <span class="text-danger">*</span></h5>
+                                    <div class="controls">
+                                        <input type="text" name="phone" class="form-control">
+                                        @error('phone')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <h5>School Response<span class="text-danger">*</span></h5>
                                     <div class="controls">
                                         <select name="school_response" class="form-control">
@@ -162,6 +181,8 @@
                                             <th>Next Meet</th>
                                             <th>Workshop</th>
                                             <th>Remarks</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
                                             <th>Action</th>
 
 
@@ -175,44 +196,21 @@
                                             <td>{{ $item->school_response }}</td>
                                             <td>{{ $item->next_meet }}</td>
                                             <td>{{ $item->workshop }}</td>
-                                            <td>{{ $item->remark }}</td>
+                                            <td>{{ $item->workshop }}</td>
+                                            <td>{{ $item->email }}</td>
+                                            <td>{{ $item->phone }}</td>
                                             <td width="30%">
                                                 <a href="{{ route('enquiryschools.edit',$item->id) }}" class="btn btn-info" title="Edit Data"><i class="fa fa-pencil"></i> </a>
 
-                                                <a href="{{ route('subsubcategory.delete',$item->id) }}" class="btn btn-danger" title="Delete Data" id="delete">
-                                                    <i class="fa fa-trash"></i></a>
+                                                
                                             </td>
 
 
                                         </tr>
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal">
-                                            View all
-                                        </button>
+                                      
 
                                         <!-- Modal -->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        ...
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save
-                                                            changes</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                         @endforeach
                                     </tbody>
 

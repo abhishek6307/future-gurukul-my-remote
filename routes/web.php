@@ -497,7 +497,7 @@ Route::prefix('reports')->group(function(){
 
 Route::get('/view', [ReportController::class, 'ReportView'])->name('all-reports');
 
-Route::post('/search/by/date', [ReportController::class, 'ReportByDate'])->name('search-by-date');
+Route::post('/search/by/date', [ReportController::class, 'ReportByDate'])->name('search-by-date'); 
 
 Route::post('/search/by/month', [ReportController::class, 'ReportByMonth'])->name('search-by-month');
 
@@ -704,13 +704,19 @@ Route::prefix('location')->group(function(){
     Route::get('/states',[LocationController::class, 'statesView'])->name('all.states'); 
     Route::get('/cities',[LocationController::class, 'citiesView'])->name('all.cities'); 
     Route::get('/schools',[LocationController::class, 'schoolsView'])->name('all.schools'); 
-    Route::get('/enquiryschools',[LocationController::class, 'enquiryschoolsView'])->name('all.enquiryschools'); 
+    Route::get('/enquiryschools',[LocationController::class, 'enquiryschoolsAdd'])->name('all.enquiryschools'); 
+    Route::get('/schoolResponseView',[LocationController::class, 'schoolResponseView'])->name('all.schoolResponseView'); 
+    Route::post('/search/by/date', [LocationController::class, 'ReportByDate'])->name('search-by-date'); 
+    Route::post('/search/between/date', [LocationController::class, 'ReportBetweenDate'])->name('search-between-date'); 
+    Route::post('/search/nextmeet/date', [LocationController::class, 'ReportByNextMeetDate'])->name('search-by-next-meet'); 
+
+
     Route::get('/enquiryschools/edit/{id}',[LocationController::class, 'enquiryschoolsedit'])->name('enquiryschools.edit'); 
 
 
 
     Route::post('/states/store',[LocationController::class, 'stateStore'])->name('states.store'); 
-    Route::post('/city/store',[LocationController::class, 'citystoStore'])->name('city.store'); 
+    Route::post('/city/store',[LocationController::class, 'cityStore'])->name('city.store'); 
     Route::post('/schools/store',[LocationController::class, 'schoolStore'])->name('school.store'); 
     Route::post('/enquiryschools/store',[LocationController::class, 'enquiryschoolsStore'])->name('enquiryschools.store'); 
 

@@ -13,62 +13,7 @@
         <div class="row">
 
 
-
-            <div class="col-8">
-
-                <div class="box">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Schools <span class="badge badge-pill badge-danger">
-                                {{ count($schools) }} </span></h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="table-responsive">
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>State Name </th>
-                                        <th>City Name</th>
-                                        <th>School Name</th>
-                                        <th>Action</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($schools as $item)
-                                    <tr>
-                                        <td> {{ $item['state']['state_name'] }} </td>
-                                        <td>{{ $item['city']['city_name'] }}</td>
-                                        <td>{{ $item->school_name }}</td>
-                                        <td width="30%">
-                                            <a href="{{ route('subsubcategory.edit',$item->id) }}" class="btn btn-info"
-                                                title="Edit Data"><i class="fa fa-pencil"></i> </a>
-
-                                            <a href="{{ route('subsubcategory.delete',$item->id) }}"
-                                                class="btn btn-danger" title="Delete Data" id="delete">
-                                                <i class="fa fa-trash"></i></a>
-                                        </td>
-
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-
-                            </table>
-                        </div>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-
-
-            </div>
-            <!-- /.col -->
-
-
-            <!--   ------------ Add state Page -------- -->
-
-
-            <div class="col-4">
+            <div class="col-12">
 
                 <div class="box">
                     <div class="box-header with-border">
@@ -142,6 +87,61 @@
                 </div>
                 <!-- /.box -->
             </div>
+
+            <div class="col-12">
+
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Schools <span class="badge badge-pill badge-danger">
+                                {{ count($schools) }} </span></h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>State Name </th>
+                                        <th>City Name</th>
+                                        <th>School Name</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($schools as $item)
+                                    <tr>
+                                        <td> {{ $item['state']['state_name'] }} </td>
+                                        <td>{{ $item['city']['city_name'] }}</td>
+                                        <td>{{ $item->school_name }}</td>
+                                        <td width="30%">
+                                            <a href="{{ route('subsubcategory.edit',$item->id) }}" class="btn btn-info"
+                                                title="Edit Data"><i class="fa fa-pencil"></i> </a>
+
+                                            <a href="{{ route('subsubcategory.delete',$item->id) }}"
+                                                class="btn btn-danger" title="Delete Data" id="delete">
+                                                <i class="fa fa-trash"></i></a>
+                                        </td>
+
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+
+
+            </div>
+            <!-- /.col -->
+
+
+            <!--   ------------ Add state Page -------- -->
+
+
 
 
 

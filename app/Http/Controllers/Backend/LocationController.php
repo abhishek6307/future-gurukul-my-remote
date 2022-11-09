@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-
+use DateTime;
+use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\States;
@@ -39,7 +40,7 @@ class LocationController extends Controller
         return view('backend.locations.school', compact('states',"cities","schools"));
         
     }
-    public function enquiryschoolsView()
+    public function enquiryschoolsAdd()
     {
       
         $states = States::orderBy('state_name', 'ASC')->get();
@@ -49,7 +50,63 @@ class LocationController extends Controller
         return view('backend.locations.schoolenquiry', compact('states',"cities","schools","enquireds"));
         
     }
-
+    public function schoolResponseView()
+    {
+      
+        $states = States::orderBy('state_name', 'ASC')->get();
+        $cities = Cities::orderBy('city_name', 'ASC')->get();
+        $schools = Schools::orderBy('school_name', 'ASC')->get();
+        $enquireds = Schoolsresponse::latest()->get();
+        return view('backend.locations.schoolResponseView', compact('states',"cities","schools","enquireds"));
+        
+    }
+    public function ReportByDate(Request $request){
+        // return $request->all();
+        $date = new DateTime($request->date);
+        $formatDate = $date->format('Y-m-d');
+        // return $formatDate;
+        $states = States::orderBy('state_name', 'ASC')->get();
+        $cities = Cities::orderBy('city_name', 'ASC')->get();
+        $schools = Schools::orderBy('school_name', 'ASC')->get();
+       
+        $enquireds = Schoolsresponse::where('created_at',$formatDate)->latest()->get();
+        return view('backend.locations.schoolResponseFilterView',compact('states',"cities","schools","enquireds","formatDate"));
+    
+    
+    
+       } 
+    public function ReportBetweenDate(Request $request){
+        // return $request->all();
+        $startdate = new DateTime($request->startdate);
+        $enddate = new DateTime($request->enddate);
+        $formatStartDate = $startdate->format('Y-m-d');
+        $formatEndDate = $enddate->format('Y-m-d');
+        // return $formatDate;
+        $states = States::orderBy('state_name', 'ASC')->get();
+        $cities = Cities::orderBy('city_name', 'ASC')->get();
+        $schools = Schools::orderBy('school_name', 'ASC')->get();
+       
+        $enquireds = Schoolsresponse::whereBetween('created_at', [$startdate, $formatEndDate])->orderBy('id','DESC')->get();
+        return view('backend.locations.schoolResponseFilterView',compact('states',"cities","schools","enquireds"));
+    
+    
+    
+       } 
+    public function ReportByNextMeetDate(Request $request){
+        // return $request->all();
+        $nextmeetdate = new DateTime($request->nextmeetdate);
+        $formatNextMeetDate = $nextmeetdate->format('Y-m-d');
+        // return $formatDate;
+        $states = States::orderBy('state_name', 'ASC')->get();
+        $cities = Cities::orderBy('city_name', 'ASC')->get();
+        $schools = Schools::orderBy('school_name', 'ASC')->get();
+       
+        $enquireds = Schoolsresponse::where('next_meet',$formatNextMeetDate)->latest()->get();
+        return view('backend.locations.schoolResponseFilterView',compact('states',"cities","schools","enquireds"));
+    
+    
+    
+       } 
     /**
      * Show the form for creating a new resource.
      *
@@ -103,6 +160,9 @@ class LocationController extends Controller
             'next_meet' => $request->next_meet,
             'workshop' => $request->workshop,
             'remark' => $request->remark,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'created_at' => Carbon::now()->format('Y-m-d'),
             
             
            ]);

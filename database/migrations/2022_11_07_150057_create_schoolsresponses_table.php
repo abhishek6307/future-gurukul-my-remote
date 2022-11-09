@@ -22,6 +22,8 @@ class CreateSchoolsresponsesTable extends Migration
             $table->date('next_meet');
             $table->string('workshop');
             $table->string('remark');
+            $table->string('email');
+            $table->string('phone');
             $table->timestamps();
         });
     }
