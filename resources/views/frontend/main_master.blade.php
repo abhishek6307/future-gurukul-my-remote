@@ -999,6 +999,6 @@ function addToWishList(product_id){
 <script src="{{asset('fronten/assets/js/dom.js')}}"></script>
  <script src="{{asset('fronten/assets/js/atl.js')}}"></script>
     <script src="{{asset('fronten/assets/js/video-list.js')}}" type="text/javascript"></script>
-
+    @yield('scripts')
 </body>
 </html>

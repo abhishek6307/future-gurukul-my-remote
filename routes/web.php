@@ -1,5 +1,8 @@
 <?php
 
+
+use App\Http\Controllers\StudentController;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
@@ -727,3 +730,8 @@ Route::prefix('location')->group(function(){
     Route::get('/city/ajax/{state_id}', [LocationController::class, 'GetCity']);
     Route::get('/school/ajax/{city_id}', [LocationController::class, 'GetSchool']);
     });
+
+
+    Route::get('students',[StudentController::class, 'index']);
+Route::post('students',[StudentController::class, 'store']);
+Route::get('/fetch-students',[StudentController::class, 'view']);

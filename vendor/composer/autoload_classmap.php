@@ -107,6 +107,7 @@ return array(
     'App\\Models\\SiteSetting' => $baseDir . '/app/Models/SiteSetting.php',
     'App\\Models\\Slider' => $baseDir . '/app/Models/Slider.php',
     'App\\Models\\States' => $baseDir . '/app/Models/States.php',
+    'App\\Models\\Student' => $baseDir . '/app/Models/Student.php',
     'App\\Models\\SubCategory' => $baseDir . '/app/Models/SubCategory.php',
     'App\\Models\\SubSubCategory' => $baseDir . '/app/Models/SubSubCategory.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
